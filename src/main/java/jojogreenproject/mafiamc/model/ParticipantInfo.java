@@ -9,21 +9,11 @@ public class ParticipantInfo {
 
 	private static ParticipantInfo participantInfo = new ParticipantInfo();
 
-	public static ParticipantInfo getParticipantInfo() {
-		return participantInfo;
-	}
-
 	private ParticipantInfo() {
 	}
 
-	@Override
-	public String toString() {
-		return "ParticipantInfo{" +
-			"citizenNumber=" + citizenNumber +
-			", mafiaNumber=" + mafiaNumber +
-			", doctorNumber=" + doctorNumber +
-			", policeNumber=" + policeNumber +
-			'}';
+	public static ParticipantInfo getParticipantInfo() {
+		return participantInfo;
 	}
 
 	public Integer getCitizenNumber() {
@@ -56,5 +46,15 @@ public class ParticipantInfo {
 
 	public void setPoliceNumber(Integer policeNumber) {
 		this.policeNumber = policeNumber;
+	}
+
+	@Override
+	public String toString() {
+		return "ParticipantInfo{" +
+			"citizenNumber=" + citizenNumber +
+			", mafiaNumber=" + mafiaNumber +
+			", doctorNumber=" + doctorNumber +
+			", policeNumber=" + policeNumber +
+			'}';
 	}
 }
