@@ -10,7 +10,7 @@ public class SettingController {
 
 	@PostMapping("/setting/participant-info")
 	public String citizenNumber(ParticipantInfo input) {
-		ParticipantInfo participantInfo = new ParticipantInfo();
+		ParticipantInfo participantInfo = ParticipantInfo.getParticipantInfo();
 
 		participantInfo.setCitizenNumber(input.getCitizenNumber());
 		participantInfo.setMafiaNumber(input.getMafiaNumber());

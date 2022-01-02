@@ -7,6 +7,15 @@ public class ParticipantInfo {
 	private Integer doctorNumber;
 	private Integer policeNumber;
 
+	private static ParticipantInfo participantInfo = new ParticipantInfo();
+
+	public static ParticipantInfo getParticipantInfo() {
+		return participantInfo;
+	}
+
+	private ParticipantInfo() {
+	}
+
 	@Override
 	public String toString() {
 		return "ParticipantInfo{" +
