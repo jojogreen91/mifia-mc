@@ -9,7 +9,7 @@ import jojogreenproject.mafiamc.model.ParticipantInfo;
 public class SettingController {
 
 	@PostMapping("/setting/participant-info")
-	public String citizenNumber(ParticipantInfo input) {
+	public String postParticipantInfo(ParticipantInfo input) {
 		ParticipantInfo participantInfo = ParticipantInfo.getParticipantInfo();
 
 		participantInfo.setCitizenNumber(input.getCitizenNumber());
@@ -17,6 +17,6 @@ public class SettingController {
 		participantInfo.setDoctorNumber(input.getDoctorNumber());
 		participantInfo.setPoliceNumber(input.getPoliceNumber());
 
-		return "setting";
+		return "member";
 	}
 }
